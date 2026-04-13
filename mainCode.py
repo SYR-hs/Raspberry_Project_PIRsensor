@@ -1,6 +1,6 @@
-from gpiozero import MotionSensor                                      # gpiozero 라이브러리에서 MotionSensor 클래스를 가져옴
-import time                                                            # time 라이브러리를 가져옴
-from picamera2 import Picamera2                                        # picamera2 라이브러리에서 Picamera2 클래스를 가져옴
+from gpiozero import MotionSensor                                      # gpiozero 라이브러리에서 MotionSensor 클래스를 가져옴. PIR 센서의 값을 읽어오기 위함.
+import time                                                            # time 라이브러리를 가져옴. 연속 촬영 방지하기 위한 모듈.
+from picamera2 import Picamera2                                        # picamera2 라이브러리에서 Picamera2 클래스를 가져옴. 카메라 모듈 제어 및 사진 촬영 용.
 import datetime                                                        # 날짜/시간처리를 위한 datetime 라이브러리를 가져옴
 
 pirPin = MotionSensor(16)                                              # GPIO 16번핀을 PIR 모션 센서 입력 핀으로 초기화
